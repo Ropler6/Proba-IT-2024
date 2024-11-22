@@ -38,7 +38,7 @@
   .login {
     justify-content: space-around;
     padding: var(--size-l); 
-    width: 30%;
+    width: max(200px, 30%);
     height: 50%;
     border-radius: 10px;
   }
@@ -62,6 +62,7 @@
     background-color: var(--secondary-color);
     border: 0;
     border-radius: 10px;
+    color: var(--tertiary-color);
   }
 
 </style>
