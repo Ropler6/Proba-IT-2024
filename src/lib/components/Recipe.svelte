@@ -2,18 +2,18 @@
    import "/src/style.css"
 
   interface Props {
-    recipeName: string;
+    name: string;
     rating: number;
     author: string;
   }
 
-  let { recipeName, rating, author, }: Props = $props();
+  let { name, rating, author, }: Props = $props();
 </script>
 
 
 <div class="rating">
   <div class="name-and-ratings">
-    <p class="recipe-name">{recipeName}</p>
+    <p class="recipe-name">{name}</p>
 
     <div class="stars">
       {#each ([1,2,3,4,5].splice(0, rating)) as _}
