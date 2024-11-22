@@ -22,18 +22,16 @@
 
 </div>
 
-<form action="">
+<div class="contact">
   <h2>Contact us</h2>
-  <input type="text" name="first-name" placeholder="First name"
-         style:grid-row="2 / 3" style:grid-column="1 / 2">
-  <input type="text" name="last-name" placeholder="Last name"
-         style:grid-row="3 / 4" style:grid-column="1 / 2">
-  <input type="text" name="email" placeholder="Email"
-         style:grid-row="4 / 5" style:grid-column="1 / 2">
-  <input type="text" name="message" placeholder="Message"
-         style:height="200px" style:grid-column="2 / 3"
-         style:grid-row="2 / 5">
-</form>
+  <form action="">
+    <input type="text" name="first-name" placeholder="First name">
+    <input type="text" name="last-name" placeholder="Last name">
+    <input type="text" name="email" placeholder="Email">
+    <input type="text" name="message" placeholder="Message"
+           style:height="150px">
+  </form>
+</div>
 
 
 <style>
@@ -58,19 +56,28 @@
     height: 300px;
   }
 
-  form {
-    display: grid;
-    grid-template-rows: repeat(4, 1fr); 
-    grid-template-columns: 1fr 3fr;
-    gap: var(--size-l);
+  .contact {
     padding: var(--size-l);
   }
 
-  form > h2, input {
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-l);
+    padding: var(--size-l);
+    height: 50vh;
+    flex-wrap: wrap;
+  }
+
+  form > input {
     color: var(--secondary-color);
     text-decoration: var(--secondary-color);
-    width: 50%;
+    width: 25%;
     height: var(--size-l);
+  }
+
+  .contact > h2 {
+    color: var(--secondary-color);
   }
 
 </style>
