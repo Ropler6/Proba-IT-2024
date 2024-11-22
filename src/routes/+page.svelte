@@ -2,9 +2,9 @@
   import "/src/style.css"
   import Header from "$lib/components/Header.svelte";
   import Recipe from "$lib/components/Recipe.svelte";
+  import { type Recipe as Recipe_T } from "$lib/ts/datatypes"
 
-  //TBA
-  let recipes: string[] = ["Pateu"];
+  let recipes: Recipe_T[] = [];
 </script>
 
 
@@ -16,7 +16,7 @@
 
   <div class="recipe-list">
     {#each recipes as recipe}
-      <Recipe recipeName={"Pateu"} author={"Student"} rating={5}/>
+      <Recipe name={recipe.name} author={recipe.author} rating={recipe.rating}/>
     {/each}
   </div>
 
