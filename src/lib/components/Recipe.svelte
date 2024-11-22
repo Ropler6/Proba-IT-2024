@@ -39,6 +39,9 @@
     justify-content: space-around;
     align-items: center;
     gap: var(--size-xxl);
+
+    background-color: var(--tertiary-color);
+    padding: var(--size-m);
   }
 
   .name-and-ratings {

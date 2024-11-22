@@ -1,4 +1,5 @@
 <script lang="ts">
+  import "/src/style.css"
   import Header from "$lib/components/Header.svelte";
   import Recipe from "$lib/components/Recipe.svelte";
 
@@ -11,7 +12,7 @@
 <div class="big-logo"></div>
 
 <div class="recipes">
-  <h2>Top rated recipes</h2>
+  <h2 style:color={"var(--tertiary-color)"}>Top rated recipes</h2>
 
   <div class="recipe-list">
     {#each recipes as recipe}
@@ -26,6 +27,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--primary-color);
   }
 
   .recipe-list {
