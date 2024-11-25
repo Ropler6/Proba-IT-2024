@@ -26,3 +26,24 @@ a.page-link {
   font-family: "serif", "sans-serif";
   font-weight: 500;
 }
+
+input.input-field {
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid white;
+  color: var(--tertiary-color);
+  text-decoration: var(--secondary-color);
+  width: 75%;
+  height: var(--size-l);
+}
+
+button.submit {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    border: none;
+    border-radius: var(--size-m);
+    padding: .5em 2em;
+    font-weight: 700;
+}
