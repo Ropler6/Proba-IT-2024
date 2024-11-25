@@ -10,9 +10,9 @@
     <h2 style:color="var(--tertiary-color)">Log in</h2>
 
     <form action="">
-      <input type="email" placeholder="Email">
-      <input type="password" placeholder="Password">
-      <button type="submit">Log in</button>
+      <input class="input-field" type="email" placeholder="Email">
+      <input class="input-field" type="password" placeholder="Password">
+      <button class="submit">Log in</button>
     </form>
   </div>
 </main>
@@ -46,23 +46,4 @@
   form {
     gap: var(--size-l);
   }
-
-  input {
-    background: transparent;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 3px solid white;
-    color: var(--tertiary-color);
-  }
-
-  button {
-    width: 100px;
-    height: 40px;
-    background-color: var(--secondary-color);
-    border: 0;
-    border-radius: 10px;
-    color: var(--tertiary-color);
-  }
-
 </style>

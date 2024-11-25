@@ -10,12 +10,12 @@
     <h2 style:color="var(--tertiary-color)">Register</h2>
 
     <form action="">
-      <input type="text" placeholder="Full name">
-      <input type="tel" placeholder="Telephone">
-      <input type="email" placeholder="Email">
-      <input type="password" placeholder="Password">
-      <input type="password" placeholder="Confirm password">
-      <button type="submit">Register</button>
+      <input class="input-field" type="text" placeholder="Full name">
+      <input class="input-field" type="tel" placeholder="Telephone">
+      <input class="input-field" type="email" placeholder="Email">
+      <input class="input-field" type="password" placeholder="Password">
+      <input class="input-field" type="password" placeholder="Confirm password">
+      <button class="submit">Register</button>
     </form>
   </div>
 </main>
@@ -49,23 +49,4 @@
   form {
     gap: var(--size-l);
   }
-
-  input {
-    background: transparent;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 3px solid white;
-    color: var(--tertiary-color);
-  }
-
-  button {
-    width: 100px;
-    height: 40px;
-    background-color: var(--secondary-color);
-    border: 0;
-    border-radius: 10px;
-    color: var(--tertiary-color);
-  }
-
 </style>

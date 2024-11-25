@@ -9,18 +9,18 @@
 <main>
   <div class="user-data">
     <div class="name">
-      <input type="text" placeholder="Name:">
+      <input class="input-field" type="text" placeholder="Name:">
     </div>
 
     <div class="info">
-      <input type="email" placeholder="Email:">
-      <input type="tel" placeholder="Telephone:">
-      <input type="text" placeholder="College group:">
+      <input class="input-field" type="email" placeholder="Email:">
+      <input class="input-field" type="tel" placeholder="Telephone:">
+      <input class="input-field" type="text" placeholder="College group:">
     </div>
   </div>
 
   <div class="button-container">
-    <button>Add a recipe</button>
+    <button class="submit">Add a recipe</button>
   </div>
 
 </main>
@@ -65,24 +65,5 @@
     padding: var(--size-l);
     height: 10em;
     width: 12em;
-  }
-
-  input {
-    background: transparent;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 3px solid white;
-    color: var(--tertiary-color);
-    text-decoration: var(--secondary-color);
-    width: 75%;
-    height: var(--size-l);
-  }
-
-  button {
-    background-color: var(--secondary-color);
-    padding: var(--size-m);
-    border-radius: var(--size-m);
-    color: var(--tertiary-color);
   }
 </style>

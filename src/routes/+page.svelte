@@ -25,10 +25,10 @@
 <div class="contact">
   <h2>Contact us</h2>
   <form action="">
-    <input type="text" name="first-name" placeholder="First name">
-    <input type="text" name="last-name" placeholder="Last name">
-    <input type="text" name="email" placeholder="Email">
-    <input type="text" name="message" placeholder="Message"
+    <input class="input-field" type="text" name="first-name" placeholder="First name">
+    <input class="input-field" type="text" name="last-name" placeholder="Last name">
+    <input class="input-field" type="text" name="email" placeholder="Email">
+    <input class="input-field" type="text" name="message" placeholder="Message"
            style:height="150px">
   </form>
 </div>
@@ -67,13 +67,6 @@
     padding: var(--size-l);
     height: 50vh;
     flex-wrap: wrap;
-  }
-
-  form > input {
-    color: var(--secondary-color);
-    text-decoration: var(--secondary-color);
-    width: 25%;
-    height: var(--size-l);
   }
 
   .contact > h2 {
