@@ -24,6 +24,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: url("/Background.png");
+    background-size: cover;
   }
 
   .recipe-data {

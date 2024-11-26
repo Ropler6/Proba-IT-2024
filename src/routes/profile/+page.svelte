@@ -34,6 +34,8 @@
     align-items: center;
     height: 100%;
     width: 100%;
+    background: url("/Background.png");
+    background-size: cover;
   }
 
   .user-data {
