@@ -9,7 +9,9 @@
 
 
 <Header/>
-<div class="big-logo"></div>
+<div class="big-logo">
+  <img src="/LogoBlack.svg" alt="Logo">
+</div>
 
 <div class="recipes">
   <h2 style:color={"var(--tertiary-color)"}>Top rated recipes</h2>
@@ -48,11 +50,15 @@
     gap: var(--size-xxl);
   }
 
+  /* Todo: fix on mobile */
   .big-logo {
-    background: center / contain no-repeat url("");
-    margin: var(--size-m);
-    width: 100vw;
-    height: 300px;
+    background: center / contain no-repeat url("/Background.png");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   /* To be fixed */
