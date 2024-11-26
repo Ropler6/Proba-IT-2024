@@ -4,7 +4,7 @@
 
 <div class="header">
   <div class="recipe-buttons">
-    <img width="25px" height="25px" src="/logo.png" alt="site logo">
+    <img width="100px" height="50px" src="/LogoWhite.svg" alt="site logo">
     <a class="page-link" href="/recipes">Recipes</a>
     <a class="page-link" href="/addrecipe">Add recipe</a>
   </div>
