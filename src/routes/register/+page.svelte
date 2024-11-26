@@ -15,8 +15,8 @@
       <input class="input-field" type="email" placeholder="Email">
       <input class="input-field" type="password" placeholder="Password">
       <input class="input-field" type="password" placeholder="Confirm password">
-      <button class="submit">Register</button>
     </form>
+    <button class="submit">Register</button>
   </div>
 </main>
 
@@ -43,12 +43,14 @@
   .register {
     justify-content: space-around;
     padding: var(--size-l); 
-    width: max(200px, 30%);
-    height: 50%;
+    width: max(15em, 25%);
+    height: 65%;
     border-radius: 10px;
+    gap: var(--size-m);
   }
 
   form {
     gap: var(--size-l);
+    width: 100%;
   }
 </style>
