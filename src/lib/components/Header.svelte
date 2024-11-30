@@ -21,6 +21,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding: var(--size-m) var(--size-xxl);
     background-color: var(--primary-color);
     border-radius: 0 0 var(--size-m) var(--size-m);
