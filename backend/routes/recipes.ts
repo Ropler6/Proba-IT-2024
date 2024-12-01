@@ -10,6 +10,29 @@ router.route("/recipes").get( async(_: Request, res: Response) => {
   else res.status(404).json("Database is empty.");
 });
 
+router.route("/recipes").post( async(req: Request, res: Response) => {
+  const newRecipe = new Recipe({
+    name: req.body.name,
+    author: req.body.author,
+    rating: 1,
+    description: req.body.description,
+  });
+
+  newRecipe.save();
+  res.status(200).json("The recipe was created successfully!");
+});
+
+// mostly for testing purposes
+router.route("/recipes").delete( async(req: Request, res: Response) => {
+  const id = req.body.id;
+  const result = await Recipe.findOneAndDelete({ _id: id });
+
+  if (result)
+    res.status(200).json(`Successfully removed the recipe with id ${id} from the database!`);
+  else
+    res.status(404).json(`Could not find recipe with id ${id}`);
+});
+
 router.route("/recipes/:id").get( async(req: Request, res: Response) => {
   const recipe = await Recipe.findById(req.params.id);
 
