@@ -1,5 +1,7 @@
 {
-	"/": [],
+	"/": [
+		"src/routes/+page.ts"
+	],
 	"/addrecipe": [],
 	"/login": [],
 	"/profile": [],
