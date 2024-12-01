@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "backend-start": "sudo systemctl start mongod && npx tsx ./server.ts",
+    "backend-stop": "sudo systemctl stop mongod"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.1",
@@ -9,7 +13,7 @@
     "@types/express": "^5.0.0",
     "@types/mongoose": "^5.11.96",
     "@types/node": "^22.10.1",
-    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
     "typescript": "^5.7.2"
   }
 }
