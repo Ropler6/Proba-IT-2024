@@ -2,6 +2,8 @@ import mongoose from "mongoose";
 
 const recipeSchema = new mongoose.Schema({
   name: String,
+  author: String,
+  rating: Number,
   description: String,
 });
 
