@@ -4,10 +4,11 @@ import { getAll } from '$lib/ts/database';
 
 export const load = ( async({ params }) => {
   const recipes = await getAll<Recipe>("recipes");
+  const topRated = recipes.sort((a, b) => b.rating - a.rating).slice(0, 2);
 
   return {
     post: {
-      recipes: recipes,
+      recipes: topRated,
     }
   }
 
