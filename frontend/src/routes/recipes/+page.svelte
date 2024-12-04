@@ -2,15 +2,10 @@
   import "/src/style.css";
   import Header from "$lib/components/Header.svelte";
   import Recipe from "$lib/components/Recipe.svelte";
-  import { type Recipe as Recipe_T } from "$lib/ts/datatypes"
+  import type { PageData } from "./$types";
 
-  let pateu: Recipe_T = {
-    name: "Pita cu pateu",
-    author: "Gogu",
-    rating: 4,
-  }
-
-  let recipes: Recipe_T[] = [pateu, pateu, pateu, pateu, pateu, pateu, pateu, pateu, pateu];
+  let { data }: { data: PageData } = $props();
+  const recipes = data.post.recipes;
 </script>
 
 

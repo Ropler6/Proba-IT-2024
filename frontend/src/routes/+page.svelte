@@ -1,12 +1,11 @@
 <script lang="ts">
-  import "/src/style.css"
+  import "/src/style.css";
   import Header from "$lib/components/Header.svelte";
   import Recipe from "$lib/components/Recipe.svelte";
-  import { type Recipe as Recipe_T } from "$lib/ts/datatypes"
   import type { PageData } from "./$types";
 
   let { data }: { data: PageData } = $props();
-  const recipes = data.post.recipes as Recipe_T[];
+  const recipes = data.post.recipes;
 </script>
 
 
