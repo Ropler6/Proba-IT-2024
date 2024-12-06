@@ -1,18 +1,32 @@
 <script lang="ts">
   import "/src/style.css";
   import Header from "$lib/components/Header.svelte";
+  import { add } from "$lib/ts/database"
+  import type { Recipe } from "$lib/ts/datatypes";
 
+  let username: string = "Ion" // TO BE ADDED
+  let recipeName: string = "";
+  let recipeDescription: string = "";
+
+  async function onclick() {
+    await add<Recipe>("recipes", {
+      name: recipeName,
+      author: username,
+      rating: 1,
+      description: recipeDescription,
+    } satisfies Recipe);
+  }
 </script>
 
 
 <Header/>
 <main>
-  <div class="recipe-data">
-    <input class="input-field" type="text" placeholder="Recipe name:">
-    <input class="input-field" type="text" placeholder="Description:">
+  <form class="recipe-data">
+    <input class="input-field" type="text" placeholder="Recipe name:" bind:value={recipeName}>
+    <input class="input-field" type="text" placeholder="Description:" bind:value={recipeDescription}>
     <button class="upload">Upload photo</button>
-    <button class="submit">Add recipe</button>
-  </div>
+    <button class="submit" {onclick}>Add recipe</button>
+  </form>
 </main>
 
 

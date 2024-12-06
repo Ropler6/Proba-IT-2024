@@ -1,14 +1,7 @@
+# Main
 node_modules
-
-# Output
-.output
-.vercel
-/.svelte-kit
+frontend/.svelte-kit
 /build
-
-# OS
-.DS_Store
-Thumbs.db
 
 # Env
 .env
