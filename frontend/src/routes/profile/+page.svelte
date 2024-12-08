@@ -1,7 +1,10 @@
 <script lang="ts">
   import "/src/style.css";
   import Header from "$lib/components/Header.svelte";
+  import type { PageData } from "./$types";
 
+  let { data }: { data: PageData } = $props();
+  let userData = data.userData;
 </script>
 
 
@@ -9,13 +12,12 @@
 <main>
   <div class="user-data">
     <div class="name">
-      <input class="input-field" type="text" placeholder="Name:">
+      <p>Username: {userData.name}</p>
     </div>
 
     <div class="info">
-      <input class="input-field" type="email" placeholder="Email:">
-      <input class="input-field" type="tel" placeholder="Telephone:">
-      <input class="input-field" type="text" placeholder="College group:">
+      <p>Email: {userData.email}</p>
+      <p>Telephone: {userData.telephone}</p>
     </div>
   </div>
 

@@ -1,7 +1,7 @@
 import express from "express";
 import type { Request, Response } from "express"
 import Recipe from "../models/recipe.ts"
-import User from "../models/user";
+import User from "../models/user.ts";
 
 const router = express.Router();
 router.route("/recipes").get( async(_: Request, res: Response) => {

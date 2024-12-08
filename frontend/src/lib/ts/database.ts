@@ -27,3 +27,14 @@ export const add = async<T>(route: string, data: T) => {
   }
 
 }
+
+export const get = async<T>(route: string) => {
+  try {
+    const response = await axios.get(`${URL}/${route}`);
+    return response.data as T;
+  }
+  catch (e: AxiosError) {
+    console.error(`Error: ${e.status}; ${e.message}`);
+    return null;
+  }
+}

@@ -11,7 +11,7 @@ export const actions = {
     const password = data.get("password") as string;
 
     try {
-      const response = await axios.post(`${URL}/register`, { name, telephone, email, password, });
+      const response = await axios.post(`${URL}/user/register`, { name, telephone, email, password, });
       const expirationDate = new Date();
       expirationDate.setMonth(expirationDate.getMonth() + 1); //after 1 month
 
