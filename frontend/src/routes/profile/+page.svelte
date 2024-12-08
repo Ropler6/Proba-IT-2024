@@ -12,12 +12,14 @@
 <main>
   <div class="user-data">
     <div class="name">
-      <p>Username: {userData.name}</p>
+      <img src="/ChefLogo.svg" alt="Chef logo">
+      <p class="data-field">Username: {userData.name}</p>
     </div>
 
     <div class="info">
-      <p>Email: {userData.email}</p>
-      <p>Telephone: {userData.telephone}</p>
+      <p class="data-field">Email: {userData.email}</p>
+      <p class="data-field">Telephone: {userData.telephone}</p>
+      <p class="data-field">College group: </p>
     </div>
   </div>
 
@@ -45,6 +47,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
     width: 100%;
     gap: var(--size-xl);
   }
@@ -60,14 +63,25 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    width: 15em;
-    height: 10em;
+    width: 30em;
+    height: 20em;
   }
 
   .name {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     background-color: var(--primary-color);
     padding: var(--size-l);
-    height: 10em;
-    width: 12em;
+    height: 20em;
+    width: 20em;
+  }
+
+  .data-field {
+    border-bottom: 3px solid white;
+    color: var(--tertiary-color);
+    text-decoration: var(--secondary-color);
+    width: 75%;
+    height: var(--size-l);
   }
 </style>
