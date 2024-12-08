@@ -10,7 +10,7 @@ router.route("/login").post( async(req: Request, res: Response) => {
 
   const account = await User.findOne({ name: username });
   if (!account) {
-    res.status(404).json(`Error 404 (not found)`)
+    res.status(404).json(`Error: User not found!`)
     return;
   }
 
@@ -45,5 +45,10 @@ router.route("/register").post( async(req: Request, res: Response) => {
   await newUser.save();
   res.status(200).json("User registered successfully!");
 });
+
+router.route("/register").get( async(req: Request, res: Response) => {
+  const users = await User.find();
+  res.status(200).json(users);
+})
 
 export default router;

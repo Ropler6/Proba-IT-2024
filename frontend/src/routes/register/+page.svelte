@@ -1,6 +1,15 @@
 <script lang="ts">
   import "/src/style.css"
   import Header from "$lib/components/Header.svelte";
+  import type { ActionData } from "./$types";
+  import { goto } from "$app/navigation";
+  import { browser } from "$app/environment";
+
+  let { form }: { form: ActionData } = $props();
+  if (form?.success && browser) {
+    goto("/recipes");
+  }
+
 </script>
 
 
@@ -9,14 +18,14 @@
   <div class="register">
     <h2 style:color="var(--tertiary-color)">Register</h2>
 
-    <form action="">
-      <input class="input-field" type="text" placeholder="Full name">
-      <input class="input-field" type="tel" placeholder="Telephone">
-      <input class="input-field" type="email" placeholder="Email">
-      <input class="input-field" type="password" placeholder="Password">
-      <input class="input-field" type="password" placeholder="Confirm password">
+    <form method="POST" action="?/register">
+      <input class="input-field" type="text" name="username" placeholder="Full name">
+      <input class="input-field" type="tel" name="telephone" placeholder="Telephone">
+      <input class="input-field" type="email" name="email" placeholder="Email">
+      <input class="input-field" type="password" name="password" placeholder="Password">
+      <input class="input-field" type="password" name="password2" placeholder="Confirm password">
+      <button class="submit">Register</button>
     </form>
-    <button class="submit">Register</button>
   </div>
 </main>
 

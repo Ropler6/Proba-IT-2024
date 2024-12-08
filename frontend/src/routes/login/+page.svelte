@@ -1,6 +1,14 @@
 <script lang="ts">
   import "/src/style.css"
   import Header from "$lib/components/Header.svelte";
+  import type { ActionData } from "./$types";
+  import { browser } from "$app/environment";
+  import { goto } from "$app/navigation";
+
+  let { form }: { form: ActionData } = $props();
+  if (form?.success && browser) {
+    goto("/recipes")
+  }
 </script>
 
 
@@ -9,7 +17,7 @@
   <div class="login">
     <h2 style:color="var(--tertiary-color)">Log in</h2>
 
-    <form action="">
+    <form method="POST" action="?/login">
       <input class="input-field" type="email" placeholder="Email">
       <input class="input-field" type="password" placeholder="Password">
       <button class="submit">Log in</button>
