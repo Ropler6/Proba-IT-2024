@@ -5,20 +5,21 @@ import type { Actions } from "@sveltejs/kit";
 export const actions = {
   login: async({ cookies, request }) => {
     const data = await request.formData();
-    const username = data.get("username") as string;
+    const email = data.get("email") as string;
     const password = data.get("password") as string;
 
-    const response = await axios.post(`${URL}/login`, { username, password, });
-
+    const response = await axios.post(`${URL}/login`, { email, password, });
     if (response.status !== 200) return { success: false, };
 
     const expirationDate = new Date();
     expirationDate.setMonth(expirationDate.getMonth() + 1); //after 1 month
-    cookies.set("username", username, { expires: expirationDate, path: "/" });
+
+    console.log(response.data);
+    cookies.set("email", email, { expires: expirationDate, path: "/" });
 
     return {
       success: true,
-      username: username,
+      email: email,
     };
   },
 } satisfies Actions;

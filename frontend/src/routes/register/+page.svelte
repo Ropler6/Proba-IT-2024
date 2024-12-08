@@ -19,7 +19,7 @@
     <h2 style:color="var(--tertiary-color)">Register</h2>
 
     <form method="POST" action="?/register">
-      <input class="input-field" type="text" name="username" placeholder="Full name">
+      <input class="input-field" type="text" name="name" placeholder="Full name">
       <input class="input-field" type="tel" name="telephone" placeholder="Telephone">
       <input class="input-field" type="email" name="email" placeholder="Email">
       <input class="input-field" type="password" name="password" placeholder="Password">

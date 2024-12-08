@@ -18,8 +18,8 @@
     <h2 style:color="var(--tertiary-color)">Log in</h2>
 
     <form method="POST" action="?/login">
-      <input class="input-field" type="email" placeholder="Email">
-      <input class="input-field" type="password" placeholder="Password">
+      <input class="input-field" type="email" name="email" placeholder="Email">
+      <input class="input-field" type="password" name="password" placeholder="Password">
       <button class="submit">Log in</button>
     </form>
   </div>
