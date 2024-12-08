@@ -5,7 +5,7 @@
   import type { PageData } from "./$types";
 
   let { data }: { data: PageData } = $props();
-  const recipes = data.post.recipes;
+  const recipes = data.recipes;
 </script>
 
 

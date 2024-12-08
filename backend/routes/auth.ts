@@ -51,4 +51,9 @@ router.route("/register").post( async(req: Request, res: Response) => {
   res.status(200).json("User registered successfully!");
 });
 
+router.route("/wipe").post( async(req: Request, res: Response) => {
+  await User.deleteMany({ name: null });
+  res.status(200).json("W I P E");
+});
+
 export default router;

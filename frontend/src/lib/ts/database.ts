@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 
 export const PORT = 3000;
 export const URL = `http://localhost:${PORT}`;
@@ -8,15 +8,22 @@ export const URL = `http://localhost:${PORT}`;
  * @returns the data as an array of `T`
  */
 export const getAll = async<T>(route: string) => {
-  const response = await axios.get(`${URL}/${route}`); 
+  try {
+    const response = await axios.get(`${URL}/${route}`); 
+    return response.data as T[];
+  }
+  catch (e: AxiosError) {
+    console.error(`Error: ${e.status}`);
+  }
 
-  if (response.status !== 200) throw new Error(`Could not fetch data from ${route}`);
-
-  return response.data as T[];
 }
 
 export const add = async<T>(route: string, data: T) => {
-  const response = await axios.post(`${URL}/${route}`,(data));
+  try {
+    const response = await axios.post(`${URL}/${route}`, data);
+  }
+  catch (e: AxiosError) {
+    console.error(`Error: ${e.status}`);
+  }
 
-  if (response.status !== 200) throw new Error(`Could not add data to ${route}`);
 }

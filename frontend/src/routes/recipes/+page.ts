@@ -6,9 +6,7 @@ export const load: PageLoad = ( async({ params }) => {
   const recipes = await getAll<Recipe>("recipes");
 
   return {
-    post: {
-      recipes: recipes,
-    }
+    recipes: recipes,
   }
 
 }) satisfies PageLoad;

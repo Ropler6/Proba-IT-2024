@@ -1,6 +1,7 @@
 import express from "express";
 import type { Request, Response } from "express"
 import Recipe from "../models/recipe.ts"
+import User from "../models/user";
 
 const router = express.Router();
 router.route("/recipes").get( async(_: Request, res: Response) => {
@@ -11,9 +12,12 @@ router.route("/recipes").get( async(_: Request, res: Response) => {
 });
 
 router.route("/recipes").post( async(req: Request, res: Response) => {
+  const user = await User.find({ email: req.body.email });
+  if (!user) res.status(404).json("Could not find user");
+
   const newRecipe = new Recipe({
     name: req.body.name,
-    author: req.body.author,
+    author: user.name,
     rating: 1,
     description: req.body.description,
   });
