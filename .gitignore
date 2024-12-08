@@ -1,6 +1,7 @@
 # Main
 node_modules
-frontend/.svelte-kit
+/frontend/.svelte-kit
+.svekte-kit
 /build
 
 # Env
