@@ -19,7 +19,7 @@ router.route("/recipes").post( async(req: Request, res: Response) => {
   const newRecipe = new Recipe({
     name: req.body.name,
     author: user.name,
-    rating: 1,
+    rating: req.body.rating || 1,
     description: req.body.description,
   });
 
