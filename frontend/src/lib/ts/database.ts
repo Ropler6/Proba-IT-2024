@@ -13,7 +13,7 @@ export const getAll = async<T>(route: string) => {
     return response.data as T[];
   }
   catch (e: AxiosError) {
-    console.error(`Error: ${e.status}`);
+    console.error(`Error ${e.status}: ${e.response.data}`);
   }
 
 }
@@ -23,7 +23,7 @@ export const add = async<T>(route: string, data: T) => {
     const response = await axios.post(`${URL}/${route}`, data);
   }
   catch (e: AxiosError) {
-    console.error(`Error: ${e.status}`);
+    console.error(`Error ${e.status}: ${e.response.data}`);
   }
 
 }
@@ -34,7 +34,7 @@ export const get = async<T>(route: string) => {
     return response.data as T;
   }
   catch (e: AxiosError) {
-    console.error(`Error: ${e.status}; ${e.message}`);
+    console.error(`Error ${e.status}: ${e.response.data}`);
     return null;
   }
 }

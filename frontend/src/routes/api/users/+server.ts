@@ -12,7 +12,7 @@ export const GET: RequestHandler = async({ cookies }) => {
     return json(user);
   }
   catch (e: AxiosError) {
-    console.error(`Error: ${e.status}`);
+    console.error(`Error ${e.status}: ${e.response.data}`);
     return json(null);
   }
 }

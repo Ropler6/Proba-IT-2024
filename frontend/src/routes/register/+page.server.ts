@@ -23,7 +23,7 @@ export const actions = {
       return { success: true, };
     }
     catch (e: AxiosError) {
-      console.error(`Error: ${e.status}`);
+      console.error(`Error ${e.status}: ${e.response.data}`);
       return { success: false, };
     }
   },
