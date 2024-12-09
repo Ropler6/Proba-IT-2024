@@ -24,7 +24,7 @@
   </div>
 
   <div class="button-container">
-    <button class="submit">Add a recipe</button>
+    <a href="/addrecipe" class="link-button">Add recipe</a>
   </div>
 
 </main>
@@ -83,5 +83,15 @@
     text-decoration: var(--secondary-color);
     width: 75%;
     height: var(--size-l);
+  }
+
+  .link-button {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    border: none;
+    border-radius: var(--size-m);
+    padding: .5em 2em;
+    font-weight: 700;
+    text-decoration: none;
   }
 </style>
