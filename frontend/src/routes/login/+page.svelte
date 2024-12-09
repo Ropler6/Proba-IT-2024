@@ -20,7 +20,7 @@
     <form method="POST" action="?/login">
       <input class="input-field" type="email" name="email" placeholder="Email">
       <input class="input-field" type="password" name="password" placeholder="Password">
-      <button class="submit">Log in</button>
+      <button class="submit">Loghează-te, chiorăie mațele!</button>
     </form>
   </div>
 </main>

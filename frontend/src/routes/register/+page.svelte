@@ -32,7 +32,7 @@
       <input class="input-field" type="email" name="email" placeholder="Email">
       <input class="input-field" type="password" name="password" placeholder="Password" bind:value={pass1}>
       <input class="input-field" type="password" name="password2" placeholder="Confirm password" bind:value={pass2}>
-      <button class="submit" onclick={checkPassword}>Register</button>
+      <button class="submit" onclick={checkPassword}>Hai, fă foamea cu noi!</button>
     </form>
   </div>
 </main>
