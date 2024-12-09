@@ -24,7 +24,7 @@
 <Header/>
 <main>
   <div class="register">
-    <h2 style:color="var(--tertiary-color)">Register</h2>
+    <h2 style:color="var(--tertiary-color)">Hai, fă foamea cu noi!</h2>
 
     <form method="POST" action="?/register">
       <input class="input-field" type="text" name="name" placeholder="Full name">
@@ -32,7 +32,7 @@
       <input class="input-field" type="email" name="email" placeholder="Email">
       <input class="input-field" type="password" name="password" placeholder="Password" bind:value={pass1}>
       <input class="input-field" type="password" name="password2" placeholder="Confirm password" bind:value={pass2}>
-      <button class="submit" onclick={checkPassword}>Hai, fă foamea cu noi!</button>
+      <button class="submit" onclick={checkPassword}>Sign up</button>
     </form>
   </div>
 </main>

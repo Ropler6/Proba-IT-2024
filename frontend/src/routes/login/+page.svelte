@@ -15,12 +15,12 @@
 <Header/>
 <main>
   <div class="login">
-    <h2 style:color="var(--tertiary-color)">Log in</h2>
+    <h2 style:color="var(--tertiary-color)">Loghează-te, chiorăie mațele!</h2>
 
     <form method="POST" action="?/login">
       <input class="input-field" type="email" name="email" placeholder="Email">
       <input class="input-field" type="password" name="password" placeholder="Password">
-      <button class="submit">Loghează-te, chiorăie mațele!</button>
+      <button class="submit">Log in</button>
     </form>
   </div>
 </main>
