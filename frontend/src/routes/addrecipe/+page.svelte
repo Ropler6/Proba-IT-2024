@@ -15,6 +15,8 @@
       rating: 1,
       description: recipeDescription,
     } satisfies Recipe);
+
+    alert(`Recipe added successfully!`);
   }
 </script>
 
