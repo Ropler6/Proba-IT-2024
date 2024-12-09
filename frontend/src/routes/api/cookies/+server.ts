@@ -5,3 +5,7 @@ import { json } from "@sveltejs/kit";
 export const GET: RequestHandler = async({ cookies }) => {
   return json(cookies.get("email") || null);
 }
+
+export const DELETE: RequestHandler = async({ cookies }) => {
+  cookies.delete("email", { path: "/" });
+}

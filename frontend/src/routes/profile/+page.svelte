@@ -8,7 +8,7 @@
 </script>
 
 
-<Header/>
+<Header isProfile={true}/>
 <main>
   <div class="user-data">
     <div class="name">
