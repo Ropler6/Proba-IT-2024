@@ -26,12 +26,17 @@
 </div>
 
 <div class="contact">
-  <h2>Contact us</h2>
   <form action="">
-    <input type="text" name="first-name" placeholder="First name">
-    <input type="text" name="last-name" placeholder="Last name">
-    <input type="text" name="email" placeholder="Email">
-    <input type="text" name="message" placeholder="Message">
+    <h2>Contact us</h2>
+    <div class="inputs">
+      <div class="small-inputs">
+        <input type="text" name="first-name" placeholder="First name">
+        <input type="text" name="last-name" placeholder="Last name">
+        <input type="text" name="email" placeholder="Email">
+      </div>
+      <input type="text" name="message" placeholder="Message">
+    </div>
+    <button class="submit" type="submit">Submit</button>
   </form>
 </div>
 
@@ -51,7 +56,6 @@
     gap: var(--size-xxl);
   }
 
-  /* Todo: fix on mobile */
   .big-logo {
     background: center / contain no-repeat url("/Background.png");
     background-size: cover;
@@ -62,7 +66,6 @@
     justify-content: center;
   }
 
-  /* To be fixed */
   .contact {
     padding: var(--size-l);
     display: flex;
@@ -70,13 +73,11 @@
     align-items: center;
   }
 
-  /* To be fixed */
   form {
     display: flex;
     flex-direction: column;
     gap: var(--size-l);
     padding: var(--size-l);
-    height: 25vh;
     width: 75%;
     flex-wrap: wrap;
   }
@@ -85,17 +86,37 @@
     color: var(--secondary-color);
     text-decoration: var(--secondary-color);
     border: 2px solid var(--secondary-color);
+    padding: var(--size-xs);
   }
 
-  /* To be fixed */
   input[name="message"] {
-    width: 40%;
-    flex: 1;
+    flex: 3;
     text-align: start;
   }
 
-  .contact > h2 {
+  .inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--size-xxl);
+    height: 100%;
+  }
+
+  .small-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 2;
+    gap: var(--size-l);
+  }
+
+  form > h2 {
     color: var(--secondary-color);
+  }
+
+  .submit {
+    align-self: flex-end;
   }
 
 </style>
