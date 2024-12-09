@@ -12,8 +12,9 @@ router.route("/recipes").get( async(_: Request, res: Response) => {
 });
 
 router.route("/recipes").post( async(req: Request, res: Response) => {
-  const user = await User.find({ email: req.body.email });
-  if (!user) res.status(404).json("Could not find user");
+  const usersFound = await User.find({ email: req.body.email });
+  if (!usersFound) res.status(404).json("Could not find user");
+  const user = usersFound[0];
 
   const newRecipe = new Recipe({
     name: req.body.name,
@@ -36,6 +37,11 @@ router.route("/recipes").delete( async(req: Request, res: Response) => {
   else
     res.status(404).json(`Could not find recipe with id ${id}`);
 });
+
+router.route("/recipes/wipe").post( async(req: Request, res: Response) => {
+  await Recipe.deleteMany();
+  res.status(200).json("W I P E");
+})
 
 router.route("/recipes/:id").get( async(req: Request, res: Response) => {
   const recipe = await Recipe.findById(req.params.id);
