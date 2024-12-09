@@ -13,7 +13,9 @@
 
 <div class="header">
   <div class="recipe-buttons">
-    <img width="100px" height="50px" src="/LogoWhite.svg" alt="site logo">
+    <a href="/">
+      <img width="100px" height="50px" src="/LogoWhite.svg" alt="site logo">
+    </a>
     <a class="page-link" href="/recipes">Recipes</a>
     <a class="page-link" href="/addrecipe">Add recipe</a>
   </div>
