@@ -9,6 +9,9 @@ export const actions = {
     const telephone = data.get("telephone") as string;
     const email = data.get("email") as string;
     const password = data.get("password") as string;
+    const password2 = data.get("password2") as string;
+
+    if (password !== password2) return { success: false, };
 
     try {
       const response = await axios.post(`${URL}/user/register`, { name, telephone, email, password, });
